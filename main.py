@@ -1,13 +1,15 @@
-from PyQt5.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QMainWindow
+# from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 
-#from ui import Ui_Form
-from test0 import Ui_Form
+from ui import Ui_Form
+# from test0 import Ui_Form
+from pyui import Ui_MainWindow
 
 
-class Window(QWidget):
+class Window(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_Form()
+        self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
 
