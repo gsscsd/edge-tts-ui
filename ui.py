@@ -33,6 +33,11 @@ class Ui_Form(object):
 
         self.lbl2 = QtWidgets.QLabel(Form)
         self.lbl2.setText("语速:")
+        
+        self.lbl4 = QtWidgets.QLabel(Form)
+        self.lbl4.setText("")
+        self.lbl5 = QtWidgets.QLabel(Form)
+        self.lbl5.setText("")
 
         self.speed = QtWidgets.QSlider(Form)
         self.speed.setMaximum(10)
@@ -43,7 +48,7 @@ class Ui_Form(object):
         self.speed.setInvertedAppearance(False)
         self.speed.setInvertedControls(False)
         self.speed.setTickPosition(QtWidgets.QSlider.TicksAbove)
-        self.speed.setTickInterval(0)
+        self.speed.setTickInterval(1)
 
         self.lbl3 = QtWidgets.QLabel(Form)
         self.lbl3.setText("音调:")
@@ -57,14 +62,16 @@ class Ui_Form(object):
         self.volumn.setInvertedAppearance(False)
         self.volumn.setInvertedControls(False)
         self.volumn.setTickPosition(QtWidgets.QSlider.TicksAbove)
-        self.volumn.setTickInterval(0)
-
+        self.volumn.setTickInterval(1)
+        
         self.gBoxLayout1.addWidget(self.lbl1, 0, 0, 1, 1)
-        self.gBoxLayout1.addWidget(self.combox, 0, 1, 1, 1)
+        self.gBoxLayout1.addWidget(self.combox, 0, 1, 1, 2)
         self.gBoxLayout1.addWidget(self.lbl2, 1, 0, 1, 1)
         self.gBoxLayout1.addWidget(self.speed, 1, 1, 1, 1)
+        self.gBoxLayout1.addWidget(self.lbl4, 1, 2, 1, 1)
         self.gBoxLayout1.addWidget(self.lbl3, 2, 0, 1, 1)
         self.gBoxLayout1.addWidget(self.volumn, 2, 1, 1, 1)
+        self.gBoxLayout1.addWidget(self.lbl5, 2, 2, 1, 1)
         
         self.ok = QtWidgets.QPushButton(Form)
         self.ok.setText("提交")
@@ -75,6 +82,9 @@ class Ui_Form(object):
         self.hBoxLayout1.addLayout(self.vBoxLayout1)
         self.hBoxLayout1.setStretch(0, 2)
         self.hBoxLayout1.setStretch(1, 1)
+        
+        self.lbl4.setText(str(self.speed.value()))
+        self.lbl5.setText(str(self.volumn.value()))
 
         Form.setLayout(self.hBoxLayout1)
 
