@@ -19,7 +19,7 @@ voies = [
 "zh-TW-YunJheNeural"
 ]
 
-fileName = "算繁星00.txt"
+fileName = "算繁星01.txt"
 text = ""
 
 with open(fileName, 'r') as f:
