@@ -15,7 +15,7 @@ import json
 # 目前代码已经完成了，但是还缺少优化
 
 # 717
-pageids = np.arange(4)
+pageids = np.arange(717)
 baseUrl = "https://www.pkdoutu.com/article/list/?page={}"
 dataPath = "./download/"
 
